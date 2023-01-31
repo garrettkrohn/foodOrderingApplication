@@ -1,3 +1,11 @@
+.background {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+}
+
 .cart-container {
   position: absolute;
   background-color: white;
@@ -8,9 +16,6 @@
   z-index: 1000;
   border: 3px solid #802609;
   border-radius: 15px;
-}
-
-.cart-total-container {
 }
 
 .cart-total-container-top {

@@ -6,12 +6,16 @@ import { useState } from "react";
 import Cart from "./Cart/Cart";
 
 function App() {
-  const [viewCart, setViewCart] = useState(true);
+  const [viewCart, setViewCart] = useState(false);
+
+  const toggleCartView = () => {
+    setViewCart(() => !viewCart);
+  };
 
   return (
     <>
-      {viewCart === true ? <Cart /> : ""}
-      <Navbar />
+      {viewCart === true ? <Cart toggle={toggleCartView} /> : ""}
+      <Navbar toggle={toggleCartView} />
       <Home />
       <Menu />
     </>

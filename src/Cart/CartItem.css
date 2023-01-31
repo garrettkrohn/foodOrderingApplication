@@ -6,16 +6,23 @@
 }
 
 .cart-item-name {
-  padding: 10px;
+  padding: 10px 0 0 10px;
   font-size: 18px;
   font-weight: 900;
 }
 
 .cart-item-price {
-  padding-left: 10px;
+  padding: 0 10px;
   color: #802609;
   font-weight: 800;
   font-size: 14px;
+}
+
+.cart-item-quantity {
+  border: gray 1px solid;
+  padding: 5px;
+  height: 10px;
+  font-size: 12px;
 }
 
 .cart-item-container-right {
@@ -37,4 +44,9 @@
 .cart-item-container-right button:hover {
   color: white;
   background-color: #802609;
+}
+
+.cart-item-container-left-bottom {
+  display: flex;
+  align-items: center;
 }

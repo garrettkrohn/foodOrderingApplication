@@ -2,11 +2,11 @@ import React from "react";
 import CartWidget from "./CartWidget";
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = (props) => {
   return (
     <div className="navbar">
       <div className="title">ReactMeals</div>
-      <CartWidget className="cart" />
+      <CartWidget toggle={props.toggle} className="cart" />
     </div>
   );
 };

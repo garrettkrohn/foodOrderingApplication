@@ -2,7 +2,7 @@ import React from "react";
 import "./Cart.css";
 import CartItem from "./CartItem";
 
-const Cart = () => {
+const Cart = (props) => {
   const menuItems = [
     {
       name: "Sushi",
@@ -32,21 +32,24 @@ const Cart = () => {
   ];
 
   return (
-    <div className="cart-container">
-      {menuItems.map((item) => (
-        <CartItem item={item} />
-      ))}
-      <div className="cart-total-container">
-        <div className="cart-total-container-top">
-          <div>Total Amount</div>
-          <div>$33.00</div>
-        </div>
-        <div className="cart-total-container-bottom">
-          <button>Close</button>
-          <button>Order</button>
+    <>
+      <div className="background"></div>
+      <div className="cart-container">
+        {menuItems.map((item) => (
+          <CartItem item={item} />
+        ))}
+        <div className="cart-total-container">
+          <div className="cart-total-container-top">
+            <div>Total Amount</div>
+            <div>$33.00</div>
+          </div>
+          <div className="cart-total-container-bottom">
+            <button onClick={props.toggle}>Close</button>
+            <button>Order</button>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
