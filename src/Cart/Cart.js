@@ -11,7 +11,7 @@ const Cart = (props) => {
       <div className="background"></div>
       <div className="cart-container">
         {menuItems.map((item) => (
-          <CartItem item={item} />
+          <CartItem key={item.name} item={item} />
         ))}
         <div className="cart-total-container">
           <div className="cart-total-container-top">

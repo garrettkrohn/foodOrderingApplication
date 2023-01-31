@@ -16,7 +16,6 @@ const MenuItem = (props) => {
       amount: parseInt(amount),
       price: props.item.price,
     };
-    console.log(repsonseObject);
     ctx.addItem(repsonseObject);
   };
 
@@ -29,7 +28,7 @@ const MenuItem = (props) => {
       </div>
       <div className="menu-item-right">
         <div className="menu-item-amount-container">
-          <div className="menu-item-amount">Amount </div>
+          <div className="menu-item-amount">Amount</div>
           <input
             className="menu-item-input"
             value={amount}
