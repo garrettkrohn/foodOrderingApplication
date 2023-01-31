@@ -1,0 +1,10 @@
+.menu-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 700px;
+  margin: auto;
+  height: auto;
+}
