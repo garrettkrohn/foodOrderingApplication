@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+import cartContext from "../store/cart-context";
 import "./CartItem.css";
 
 const CartItem = (props) => {
+  const ctx = useContext(cartContext);
+
   return (
     <div className="cart-item-container">
       <div className="cart-item-container-left">
@@ -10,7 +13,7 @@ const CartItem = (props) => {
         </div>
         <div className="cart-item-container-left-bottom">
           <div className="cart-item-price">{props.item.price}</div>
-          <div className="cart-item-quantity">x2</div>
+          <div className="cart-item-quantity">x{props.item.amount}</div>
         </div>
       </div>
       <div className="cart-item-container-right">

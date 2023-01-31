@@ -25,7 +25,7 @@ const MenuItem = (props) => {
       <div className="menu-item-left">
         <div className="menu-item-title">{props.item.name}</div>
         <div className="menu-item-description">{props.item.description}</div>
-        <div className="menu-item-price">{props.item.price}</div>
+        <div className="menu-item-price">${props.item.price}</div>
       </div>
       <div className="menu-item-right">
         <div className="menu-item-amount-container">

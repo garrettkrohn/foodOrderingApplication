@@ -16,7 +16,7 @@ const Cart = (props) => {
         <div className="cart-total-container">
           <div className="cart-total-container-top">
             <div>Total Amount</div>
-            <div>$33.00</div>
+            <div>{ctx.totalAmount}</div>
           </div>
           <div className="cart-total-container-bottom">
             <button onClick={props.toggle}>Close</button>
