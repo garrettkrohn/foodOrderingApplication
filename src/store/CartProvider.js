@@ -11,7 +11,6 @@ const defaultCartState = {
 // you send an object with a type, and a payload (names can vary)
 const cartReducer = (state, action) => {
   if (action.type === "ADD") {
-    console.log("add");
     const updatedItems = state.items.concat(action.item);
     const updatedTotalAmount =
       state.totalAmount + action.item.price * action.item.amount;
