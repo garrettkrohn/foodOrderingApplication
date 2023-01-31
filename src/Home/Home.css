@@ -1,9 +1,9 @@
 .home-container {
-  height: 350px;
+  height: 300px;
   width: 100%;
   display: flex;
   justify-content: center;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 .image {
@@ -22,7 +22,7 @@
   position: absolute;
   color: white;
   border-radius: 10px;
-  margin-top: 200px;
+  margin-top: 75px;
   text-align: center;
 }
 

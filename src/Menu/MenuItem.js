@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./MenuItem.css";
 
 const MenuItem = (props) => {
+  const [amount, setAmount] = useState(1);
+
+  const handleChange = (event) => {
+    setAmount(event.target.value);
+  };
+
+  const handleClick = () => {
+    console.log(amount);
+  };
+
   return (
     <div className="menu-item-container">
       <div className="menu-item-left">
@@ -12,10 +22,13 @@ const MenuItem = (props) => {
       <div className="menu-item-right">
         <div className="menu-item-amount-container">
           <div className="menu-item-amount">Amount </div>
-          <input className="menu-item-input" />
+          <input
+            className="menu-item-input"
+            value={amount}
+            onChange={handleChange}
+          />
         </div>
-
-        <button>+ Add</button>
+        <button onClick={handleClick}>+ Add</button>
       </div>
     </div>
   );
