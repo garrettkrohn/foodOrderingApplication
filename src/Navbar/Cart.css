@@ -1,0 +1,21 @@
+.cart-container {
+  background-color: rgb(44, 38, 38);
+  height: 55px;
+  width: 200px;
+  font-size: 14px;
+  border-radius: 25px;
+  margin-right: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.cart-quantity {
+  background-color: red;
+  width: 30px;
+  height: 26px;
+  border-radius: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
