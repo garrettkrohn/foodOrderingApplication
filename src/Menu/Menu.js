@@ -35,7 +35,7 @@ const Menu = () => {
     <div className="menu-container">
       <div>
         {menuItems.map((item) => (
-          <MenuItem item={item} />
+          <MenuItem key={item.name} item={item} />
         ))}
       </div>
     </div>

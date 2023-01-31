@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import cartContext from "../store/cart-context";
 import "./MenuItem.css";
 
 const MenuItem = (props) => {
+  const ctx = useContext(cartContext);
   const [amount, setAmount] = useState(1);
 
   const handleChange = (event) => {
@@ -9,7 +11,12 @@ const MenuItem = (props) => {
   };
 
   const handleClick = () => {
-    console.log(amount);
+    const repsonseObject = {
+      name: props.item.name,
+      quantity: amount,
+      price: props.item.price,
+    };
+    ctx.addItem(repsonseObject);
   };
 
   return (

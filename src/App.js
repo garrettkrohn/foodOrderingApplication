@@ -4,6 +4,7 @@ import Navbar from "./Navbar/Navbar";
 import Menu from "./Menu/Menu";
 import { useState } from "react";
 import Cart from "./Cart/Cart";
+import CartProvider from "./store/CartProvider";
 
 function App() {
   const [viewCart, setViewCart] = useState(false);
@@ -13,12 +14,12 @@ function App() {
   };
 
   return (
-    <>
+    <CartProvider>
       {viewCart === true ? <Cart toggle={toggleCartView} /> : ""}
       <Navbar toggle={toggleCartView} />
       <Home />
       <Menu />
-    </>
+    </CartProvider>
   );
 }
 
