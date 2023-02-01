@@ -5,6 +5,23 @@ import "./CartItem.css";
 const CartItem = (props) => {
   const ctx = useContext(cartContext);
 
+  const increment = () => {
+    const repsonseObject = {
+      name: props.item.name,
+      quantity: 1,
+      price: props.item.price,
+    };
+    ctx.addItem(repsonseObject);
+  };
+
+  const decrement = () => {
+    const responseObject = {
+      name: props.item.name,
+      price: props.item.price,
+    };
+    ctx.removeItem(responseObject);
+  };
+
   return (
     <div className="cart-item-container">
       <div className="cart-item-container-left">
@@ -17,8 +34,8 @@ const CartItem = (props) => {
         </div>
       </div>
       <div className="cart-item-container-right">
-        <button>-</button>
-        <button>+</button>
+        <button onClick={decrement}>-</button>
+        <button onClick={increment}>+</button>
       </div>
     </div>
   );
