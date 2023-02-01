@@ -13,7 +13,7 @@ const MenuItem = (props) => {
   const handleClick = () => {
     const repsonseObject = {
       name: props.item.name,
-      amount: parseInt(amount),
+      quantity: parseInt(amount),
       price: props.item.price,
     };
     ctx.addItem(repsonseObject);

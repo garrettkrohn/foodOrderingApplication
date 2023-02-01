@@ -7,7 +7,7 @@ const Cart = (props) => {
   const ctx = useContext(cartContext);
 
   const numberOfCartItems = ctx.items.reduce((curNumber, item) => {
-    return curNumber + item.amount;
+    return curNumber + item.quantity;
   }, 0);
 
   return (

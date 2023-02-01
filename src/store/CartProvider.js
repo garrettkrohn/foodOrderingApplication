@@ -11,14 +11,24 @@ const defaultCartState = {
 // you send an object with a type, and a payload (names can vary)
 const cartReducer = (state, action) => {
   if (action.type === "ADD") {
+    //check if item is already in array
     for (let x = 0; x < state.items.length; x++) {
-      console.log(x);
+      if (state.items[x].name === action.item.name) {
+        let updatedItems = state.items.map((item) => {
+          return { ...item };
+        });
+        updatedItems.find((item) => item.name == action.item.name).quantity +=
+          action.item.quantity;
+        const updatedTotalAmount =
+          state.totalAmount + action.item.price * action.item.quantity;
+        return { items: updatedItems, totalAmount: updatedTotalAmount };
+      }
     }
-    const updatedItems = state.items.concat(action.item);
+    const addedItems = state.items.concat(action.item);
     const updatedTotalAmount =
-      state.totalAmount + action.item.price * action.item.amount;
+      state.totalAmount + action.item.price * action.item.quantity;
     return {
-      items: updatedItems,
+      items: addedItems,
       totalAmount: updatedTotalAmount,
     };
   }
